@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-const URL = 'https://covid19.mathdro.id/api' 
+const URL = 'https://api.covid19api.com/summary' 
 
 @Injectable()
 export class AppService {

@@ -20,14 +20,15 @@ export class AppComponent implements OnInit {
   private fetchedData() {
     this.service.fetchedData().subscribe(res => {
       const data = {
-        confirmed: res['confirmed'],
-        recovered: res['recovered'],
-        deaths: res['deaths'],
-        lastUpdate: res['lastUpdate'],
+        confirmed: res['Global']['TotalConfirmed'],
+        recovered: res['Global']['TotalRecovered'],
+        deaths: res['Global']['TotalDeaths'],
+        lastUpdate: res['Date'],
       }
       this.data = data
     }, error => {
       console.log(error)
+      //alert handler
     }, () => {
       this.isLoader = false;
     })
@@ -42,6 +43,7 @@ export class AppComponent implements OnInit {
         lastUpdate: res['lastUpdate'],
       }
       this.data = data
+      console.log(res)
     }, error => {
       console.log(error)
     }, () => {
