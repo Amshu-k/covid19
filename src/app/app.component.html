@@ -1,5 +1,9 @@
-<div class="container">
-  <app-cards [data]="data" [isLoader]="isLoader"></app-cards>
-  <!-- <app-country-picker></app-country-picker>
-  <app-chart></app-chart> -->
+<h1 style="text-align: center;">COVID 19 STATISTICS</h1>
+<div *ngIf="data">
+  <div class="container cards">
+    <app-cards [data]="data" [isLoader]="isLoader"></app-cards>
+  </div>
+  <div class="container country-picker">
+    <app-country-picker [data]="data"></app-country-picker>
+  </div>
 </div>

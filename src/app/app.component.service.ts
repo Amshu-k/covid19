@@ -11,8 +11,4 @@ export class AppService {
     fetchedData() {
         return this.http.get(URL)
     }
-
-    fetchDailyData() {
-        return this.http.get(`${URL}/daily`)
-    }
 }

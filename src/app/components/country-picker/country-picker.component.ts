@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-country-picker',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./country-picker.component.scss']
 })
 export class CountryPickerComponent implements OnInit {
-
+  @Input() data
+  public countries: []
+  selectedCountry: object = {};
+  
   constructor() { }
 
   ngOnInit(): void {
+    this.countries = this.data.countries
   }
 
 }

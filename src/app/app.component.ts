@@ -14,7 +14,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.fetchedData();
-    this.fetchDailyData();
   }
 
   private fetchedData() {
@@ -24,6 +23,7 @@ export class AppComponent implements OnInit {
         recovered: res['Global']['TotalRecovered'],
         deaths: res['Global']['TotalDeaths'],
         lastUpdate: res['Date'],
+        countries: res['Countries'],
       }
       this.data = data
     }, error => {
@@ -34,21 +34,6 @@ export class AppComponent implements OnInit {
     })
   }
 
-  private fetchDailyData() {
-    this.service.fetchDailyData().subscribe(res => {
-      const data = {
-        confirmed: res['confirmed'],
-        recovered: res['recovered'],
-        deaths: res['deaths'],
-        lastUpdate: res['lastUpdate'],
-      }
-      this.data = data
-      console.log(res)
-    }, error => {
-      console.log(error)
-    }, () => {
-      this.isLoader = false;
-    })
-  }
+  
 
 }

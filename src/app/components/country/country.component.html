@@ -1,0 +1,16 @@
+<div *ngIf="selectedCountry && selectedCountry['Country']">
+  <mat-card class="card">
+    <mat-card-header>
+      <div mat-card-avatar [ngStyle]="{'background-image': getCountryFlag()}"></div>
+      <mat-card-title>{{selectedCountry.Country}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Total Cases <strong [countUp]="selectedCountry['TotalConfirmed']"></strong></p>
+      <p>Total Recovered <strong [countUp]="selectedCountry['TotalRecovered']"></strong></p>
+      <p>Total Deaths <strong [countUp]="selectedCountry['TotalDeaths']"></strong></p>
+      <p>New Confirmed <strong [countUp]="selectedCountry['NewConfirmed']"></strong></p>
+      <p>New Recovered <strong [countUp]="selectedCountry['NewRecovered']"></strong></p>
+      <p>New Deaths <strong [countUp]="selectedCountry['NewDeaths']"></strong></p>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,1 +1,11 @@
-<p>country-picker works!</p>
+<mat-form-field appearance="fill">
+    <mat-label>Countries</mat-label>
+    <mat-select [(value)]="selectedCountry">
+        <mat-option *ngFor="let country of countries" [value]="country">
+            {{country.Country}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+<div>
+    <app-country [selectedCountry]="selectedCountry"></app-country>
+</div>
