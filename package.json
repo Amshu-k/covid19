@@ -2,6 +2,7 @@
   "name": "covid19",
   "version": "0.0.0",
   "scripts": {
+    "heroku-postbuild": "ng build --prod",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -11,6 +12,9 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "~10.0.8",
+    "@angular/compiler-cli": "~10.0.14",
+    "typescript": "~3.9.5",
     "@angular/animations": "~10.0.14",
     "@angular/cdk": "^10.1.3",
     "@angular/common": "~10.0.14",
@@ -25,6 +29,10 @@
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
+  },
+  "engines": {
+    "node": "12.18.3",
+    "npm": "6.14.6"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1000.8",
