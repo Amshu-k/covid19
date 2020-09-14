@@ -1,6 +1,7 @@
 # Covid19
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
+This app is deployed on DockerHub in [my profile](https://hub.docker.com/r/gandalf7/covid19)
 
 ## Development server
 
